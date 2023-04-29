@@ -10,3 +10,7 @@
   * https://qiita.com/ke_na/items/ee6a6edd24847c616b62
 * document.jsとは
   * https://zenn.dev/oozato/scraps/f21351a602a9cb
+* fetchとaxiosの4つの相違点
+  * https://zenn.dev/syu/articles/9840082d1a6633
+* middlewareでaxios使った時に出るエラー
+  * https://zenn.dev/nicopin/articles/5dc87c27bd08de

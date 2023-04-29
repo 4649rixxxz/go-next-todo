@@ -17,7 +17,7 @@ const Login = () => {
 				const authUser = await fetchAuthenticatedUser()
 				const {data} = authUser
         if (data.user_id) {
-          router.replace('/home');
+          router.push('/member/home');
         } else {
           setAuth(null)
         }
@@ -41,7 +41,7 @@ const Login = () => {
       const {data} = res;
       if (data.user_id) {
         setAuth(data.user_id)
-        router.replace('/home');
+        router.push('/member/home');
       }
     } catch (e: unknown) {
       if (isAxiosError(e)) {
