@@ -10,22 +10,23 @@ const MemberAuth = ({children}: ChildrenProps) => {
 
   useEffect(() => {
     const init = async () => {
-			try {
-				const authUser = await fetchAuthenticatedUser()
+      try {
+        const authUser = await fetchAuthenticatedUser()
         setLoading(false);
-			} catch (e: unknown) {
-				if (isAxiosError(e)) {
-					console.log(e.message)
-				}
+      } catch (e: unknown) {
+        if (isAxiosError(e)) {
+          console.log(e.message)
+        }
         router.push('/login');
-			}
-		}
-		init()
+      }
+    }
+    init()
   }, []);
-
+  
   if (loading) {
-		return (<div>Loading now.....</div>)
-	}
+    return (<div>Loading now.....</div>)
+  }
+
   return <>{children}</>
 }
 
